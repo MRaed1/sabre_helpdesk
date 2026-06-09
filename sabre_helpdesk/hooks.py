@@ -1,8 +1,8 @@
 app_name = "sabre_helpdesk"
 app_title = "Sabre Helpdesk"
 app_publisher = "Main Telecom"
-app_description = "Sabre Helpdesk Workflow Management"
-app_email = " m.raed@cx3.me"
+app_description = "Sabre Helpdesk Workflow Managment"
+app_email = "m.raed@cx3.me"
 app_license = "mit"
 
 # Apps
@@ -250,15 +250,3 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
-
-fixtures = [
-
-     {
-        "dt": "Custom Field",
-        "filters": [["dt", "in", ["HD Ticket"]]]
-    },
-    {
-        "dt": "Server Script",
-        "filters": [["reference_doctype", "in", ["HD Ticket"]]]
-    }
-]
