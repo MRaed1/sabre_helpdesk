@@ -275,4 +275,9 @@ fixtures = [
             ["name", "=", "HD Issue Category"]
         ]
     }
-    ]
+    ,
+    {
+        "dt": "Server Script",
+        "filters": [["name", "=", "agency_email"]]
+    }
+]
