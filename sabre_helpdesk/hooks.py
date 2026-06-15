@@ -258,6 +258,21 @@ doc_events = {
 # ignore_translatable_strings_from = []
 
 fixtures = [
-    {"dt": "HD Ticket Type", "filters": [["name", "=", "Phone Call"]]},
-]
-
+    {
+        "dt": "HD Ticket Type", 
+        "filters": [["name", "=", "Phone Call"]]
+    },
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["dt", "=", "HD Ticket"],
+            ["fieldname", "in", ["pcc", "agency_name", "custom_agent_contact", "custom_issue_category", "custom_subissue"]]
+        ]
+    },
+    {
+        "dt": "DocType",
+        "filters": [
+            ["name", "=", "HD Issue Category"]
+        ]
+    }
+    ]
