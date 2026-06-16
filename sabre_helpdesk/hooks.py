@@ -266,16 +266,9 @@ fixtures = [
         "dt": "Custom Field",
         "filters": [
             ["dt", "=", "HD Ticket"],
-            ["fieldname", "in", ["pcc", "agency_name", "custom_agent_contact", "custom_issue_category", "custom_subissue"]]
+            ["fieldname", "in", ["pcc", "agency_name", "custom_agent_contact", "custom_subissue"]]
         ]
     },
-    {
-        "dt": "DocType",
-        "filters": [
-            ["name", "=", "HD Issue Category"]
-        ]
-    }
-    ,
     {
         "dt": "Server Script",
         "filters": [["name", "=", "agency_email"]]
