@@ -265,12 +265,23 @@ fixtures = [
     {
         "dt": "Custom Field",
         "filters": [
-            ["dt", "=", "HD Ticket"],
-            ["fieldname", "in", ["pcc", "agency_name", "custom_agent_contact", "custom_subissue"]]
+            ["dt", "=", "HD Ticket"]
         ]
     },
     {
         "dt": "Server Script",
-        "filters": [["name", "=", "agency_email"]]
+        "filters": [["name", "=", "HD Ticket - CRM Lookup & Routing"]]
+    },
+    {
+        "dt": "Notification",
+        "filters": [
+            ["name", "=", "Send Auto Acknowledgment on New Ticket"]
+        ]
+    },
+    {
+        "dt": "Assignment Rule",
+        "filters": [
+            ["name", "like", "Sabre%"]
+        ]
     }
 ]
