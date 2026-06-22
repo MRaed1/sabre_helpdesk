@@ -1,0 +1,181 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "HD Ticket",
+  "enable_action_confirmation": 0,
+  "is_active": 1,
+  "modified": "2026-06-21 15:13:41.890563",
+  "name": "HD Ticket Workflow",
+  "override_status": 0,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "Agent",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "evaluate_as_expression": 0,
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "New",
+    "update_field": "status",
+    "update_value": "Open",
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "Agent",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "evaluate_as_expression": 0,
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "In progress",
+    "update_field": "status",
+    "update_value": "Open",
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "Agent",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "evaluate_as_expression": 0,
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "Pending",
+    "update_field": "status",
+    "update_value": "Replied",
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "Agent",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "evaluate_as_expression": 0,
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "Escalated",
+    "update_field": "status",
+    "update_value": "Open",
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "Agent",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "evaluate_as_expression": 0,
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "Resolved",
+    "update_field": "status",
+    "update_value": "Resolved",
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "Agent",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "evaluate_as_expression": 0,
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "Closed",
+    "update_field": "status",
+    "update_value": "Closed",
+    "workflow_builder_id": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Accept Ticket",
+    "allow_self_approval": 1,
+    "allowed": "Agent",
+    "condition": null,
+    "next_state": "In progress",
+    "send_email_to_creator": 0,
+    "state": "New",
+    "transition_tasks": null,
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Pending",
+    "allow_self_approval": 1,
+    "allowed": "Agent",
+    "condition": null,
+    "next_state": "Pending",
+    "send_email_to_creator": 0,
+    "state": "In progress",
+    "transition_tasks": null,
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Resume",
+    "allow_self_approval": 1,
+    "allowed": "Agent",
+    "condition": null,
+    "next_state": "In progress",
+    "send_email_to_creator": 0,
+    "state": "Pending",
+    "transition_tasks": null,
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Escalate Case",
+    "allow_self_approval": 1,
+    "allowed": "Agent",
+    "condition": null,
+    "next_state": "Escalated",
+    "send_email_to_creator": 0,
+    "state": "In progress",
+    "transition_tasks": null,
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Resolve",
+    "allow_self_approval": 1,
+    "allowed": "Agent",
+    "condition": null,
+    "next_state": "Resolved",
+    "send_email_to_creator": 0,
+    "state": "In progress",
+    "transition_tasks": null,
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Resolve",
+    "allow_self_approval": 1,
+    "allowed": "Agent",
+    "condition": null,
+    "next_state": "Resolved",
+    "send_email_to_creator": 0,
+    "state": "Escalated",
+    "transition_tasks": null,
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Close",
+    "allow_self_approval": 1,
+    "allowed": "Agent",
+    "condition": null,
+    "next_state": "Closed",
+    "send_email_to_creator": 0,
+    "state": "Resolved",
+    "transition_tasks": null,
+    "workflow_builder_id": null
+   }
+  ],
+  "workflow_data": null,
+  "workflow_name": "HD Ticket Workflow",
+  "workflow_state_field": "workflow_state"
+ }
+]

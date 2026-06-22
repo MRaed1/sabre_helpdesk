@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "HD Ticket",
+  "enabled": 1,
+  "modified": "2026-06-22 10:11:01.246627",
+  "module": "Sabre Helpdesk",
+  "name": "HD Ticket - Create Task Button",
+  "script": "frappe.ui.form.on('HD Ticket', {\n    refresh(frm) {\n        if (frm.is_new()) return;\n\n        frm.add_custom_button('Create a new sub-task', () => {\n            frappe.new_doc('Task', {\n                subject: 'متابعة: ' + frm.doc.subject,\n                custom_ticket: frm.doc.name,\n                description: 'مرتبطة بالتذكرة: ' + frm.doc.name\n            });\n        });\n\n        frappe.db.get_list('Task', {\n            filters: { custom_ticket: frm.doc.name, status: ['!=', 'Cancelled'] },\n            fields: ['name', 'subject', 'status']\n        }).then(tasks => {\n            if (tasks.length > 0) {\n                let html = '<table class=\"table table-bordered table-sm\" style=\"margin-top:8px\">';\n                html += '<thead><tr><th>المهمة</th><th>الموضوع</th><th>الحالة</th></tr></thead><tbody>';\n                tasks.forEach(t => {\n                    html += `<tr>\n                        <td><a href=\"/desk/Form/Task/${t.name}\" target=\"_blank\">${t.name}</a></td>\n                        <td>${t.subject}</td>\n                        <td>${t.status}</td>\n                    </tr>`;\n                });\n                html += '</tbody></table>';\n                frm.dashboard.add_section(html, 'المهام المرتبطة');\n            }\n        });\n    }\n});",
+  "view": "Form"
+ }
+]

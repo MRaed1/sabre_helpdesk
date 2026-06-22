@@ -264,24 +264,27 @@ fixtures = [
     },
     {
         "dt": "Custom Field",
-        "filters": [
-            ["dt", "=", "HD Ticket"]
-        ]
+        "filters": [["dt", "in", ["HD Ticket", "Task"]]]
+    },
+    {
+        "dt": "Client Script",
+        "filters": [["name", "=", "HD Ticket - Create Task Button"]]
     },
     {
         "dt": "Server Script",
         "filters": [["name", "=", "HD Ticket - CRM Lookup & Routing"]]
     },
     {
+        "dt": "Workflow",
+        "filters": [["name", "=", "HD Ticket Workflow"]]
+    },
+    {
         "dt": "Notification",
         "filters": [
-            ["name", "=", "Send Auto Acknowledgment on New Ticket"]
-        ]
+            ["name", "=", "Send Auto Acknowledgment on New Ticket"]]
     },
     {
         "dt": "Assignment Rule",
-        "filters": [
-            ["name", "like", "Sabre%"]
-        ]
+        "filters": [["name", "like", "Sabre%"]]
     }
 ]
