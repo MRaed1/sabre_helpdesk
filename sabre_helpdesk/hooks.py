@@ -286,5 +286,18 @@ fixtures = [
     {
         "dt": "Assignment Rule",
         "filters": [["name", "like", "Sabre%"]]
+    },
+    {
+        "doctype": "Workspace",
+        "filters": [["module", "=", "Sabre Helpdesk"]]
+    },
+    {
+        "doctype": "Workspace Sidebar",
+        "filters": [["app", "=", "sabre_helpdesk"]]
+    },
+    {
+        "doctype": "Dashboard Chart",
+        "filters": [["module", "=", "Sabre Helpdesk"]]
     }
 ]
+after_migrate = ["sabre_helpdesk.setup.import_workspace"]
