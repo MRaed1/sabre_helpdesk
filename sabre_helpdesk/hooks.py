@@ -298,6 +298,10 @@ fixtures = [
     {
         "doctype": "Dashboard Chart",
         "filters": [["module", "=", "Sabre Helpdesk"]]
+    },
+    {
+        "dt": "Desktop Icon",
+        "filters": [["name", "=", "Sabre Helpdesk"]]
     }
 ]
 after_migrate = ["sabre_helpdesk.setup.import_workspace"]
