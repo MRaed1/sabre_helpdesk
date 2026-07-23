@@ -1,1 +1,68 @@
-[]
+[
+ {
+  "app": "sabre_helpdesk",
+  "docstatus": 0,
+  "doctype": "Workspace Sidebar",
+  "for_user": null,
+  "header_icon": null,
+  "items": [
+   {
+    "child": 0,
+    "collapsible": 1,
+    "display_depends_on": null,
+    "filters": null,
+    "icon": "headset",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Sabre Support",
+    "link_to": "Sabre Support",
+    "link_type": "Workspace",
+    "navigate_to_tab": null,
+    "route_options": null,
+    "show_arrow": 0,
+    "type": "Link",
+    "url": null
+   },
+   {
+    "child": 0,
+    "collapsible": 1,
+    "display_depends_on": null,
+    "filters": null,
+    "icon": "tickets",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Sabre Ticket",
+    "link_to": "HD Ticket",
+    "link_type": "DocType",
+    "navigate_to_tab": null,
+    "route_options": null,
+    "show_arrow": 0,
+    "type": "Link",
+    "url": null
+   },
+   {
+    "child": 0,
+    "collapsible": 1,
+    "display_depends_on": null,
+    "filters": null,
+    "icon": "logs",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "3CX Call Log",
+    "link_to": "Call Log",
+    "link_type": "DocType",
+    "navigate_to_tab": null,
+    "route_options": null,
+    "show_arrow": 0,
+    "type": "Link",
+    "url": null
+   }
+  ],
+  "modified": "2026-07-24 02:46:34.004606",
+  "module": "Sabre Helpdesk",
+  "module_onboarding": null,
+  "name": "Sabre Support",
+  "standard": 0,
+  "title": "Sabre Support"
+ }
+]

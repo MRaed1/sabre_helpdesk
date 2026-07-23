@@ -288,20 +288,20 @@ fixtures = [
         "filters": [["name", "like", "Sabre%"]]
     },
     {
-        "doctype": "Workspace",
-        "filters": [["module", "=", "Sabre Helpdesk"]]
+        "dt": "Workspace",
+        "filters": [["name", "=", "Sabre Support"]]
     },
     {
-        "doctype": "Workspace Sidebar",
+        "dt": "Workspace Sidebar",
+        "filters": [["app", "=", "sabre_helpdesk"]]
+    },
+    {
+        "dt": "Desktop Icon",
         "filters": [["app", "=", "sabre_helpdesk"]]
     },
     {
         "doctype": "Dashboard Chart",
         "filters": [["module", "=", "Sabre Helpdesk"]]
-    },
-    {
-        "dt": "Desktop Icon",
-        "filters": [["name", "=", "Sabre Helpdesk"]]
     }
 ]
 after_migrate = ["sabre_helpdesk.setup.import_workspace"]
