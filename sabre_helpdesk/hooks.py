@@ -297,7 +297,7 @@ fixtures = [
     },
     {
         "dt": "Desktop Icon",
-        "filters": [["app", "=", "sabre_helpdesk"]]
+        "filters": [["name", "in", ["Sabre Support"]]]
     },
     {
         "dt": "Dashboard Chart",
