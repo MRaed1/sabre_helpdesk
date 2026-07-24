@@ -300,8 +300,8 @@ fixtures = [
         "filters": [["app", "=", "sabre_helpdesk"]]
     },
     {
-        "doctype": "Dashboard Chart",
-        "filters": [["module", "=", "Sabre Helpdesk"]]
+        "dt": "Dashboard Chart",
+        "filters": [["name", "in", ["Tickets by Status", "Tickets by Source"]]]
     }
 ]
 after_migrate = ["sabre_helpdesk.setup.import_workspace"]
