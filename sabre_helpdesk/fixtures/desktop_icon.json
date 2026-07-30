@@ -1,24 +1,24 @@
 [
  {
-  "app": "sabre_helpdesk",
+  "app": null,
   "bg_color": "gray",
   "docstatus": 0,
   "doctype": "Desktop Icon",
   "hidden": 0,
   "icon": null,
-  "icon_image": null,
+  "icon_image": "/files/help-desk-icon.png",
   "icon_type": "Link",
   "label": "Sabre Support",
   "link": null,
   "link_to": "Sabre Support",
   "link_type": "Workspace Sidebar",
   "logo_url": null,
-  "modified": "2026-07-24 02:46:34.032591",
+  "modified": "2026-07-26 11:51:14.541290",
   "name": "Sabre Support",
   "parent_icon": null,
   "restrict_removal": 0,
   "roles": [],
   "sidebar": null,
-  "standard": 1
+  "standard": 0
  }
 ]

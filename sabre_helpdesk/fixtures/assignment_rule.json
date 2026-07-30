@@ -1,5 +1,287 @@
 [
  {
+  "assign_condition": "status == 'Open' and agent_group == 'Sabre CSM Team'",
+  "assign_condition_json": "[[\"status\",\"==\",\"Open\"],\"and\",[\"agent_group\",\"==\",\"Sabre CSM Team\"]]",
+  "assignment_days": [
+   {
+    "day": "Monday"
+   },
+   {
+    "day": "Tuesday"
+   },
+   {
+    "day": "Wednesday"
+   },
+   {
+    "day": "Thursday"
+   },
+   {
+    "day": "Friday"
+   },
+   {
+    "day": "Saturday"
+   },
+   {
+    "day": "Sunday"
+   }
+  ],
+  "close_condition": null,
+  "description": "Automatic Assignment",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Assignment Rule",
+  "document_type": "HD Ticket",
+  "due_date_based_on": null,
+  "field": null,
+  "last_user": "csm@sabre.com",
+  "modified": "2026-07-08 10:25:40.330289",
+  "name": "Sabre CSM Team - Support Rotation-1",
+  "priority": 1,
+  "rule": "Round Robin",
+  "unassign_condition": "agent_group != 'Sabre CSM Team'",
+  "unassign_condition_json": "[[\"agent_group\",\"!=\",\"Sabre CSM Team\"]]",
+  "users": [
+   {
+    "user": "csm@sabre.com"
+   }
+  ]
+ },
+ {
+  "assign_condition": "status == 'Open' and agent_group == 'Sabre IT Support'",
+  "assign_condition_json": "[[\"status\",\"==\",\"Open\"],\"and\",[\"agent_group\",\"==\",\"Sabre IT Support\"]]",
+  "assignment_days": [
+   {
+    "day": "Monday"
+   },
+   {
+    "day": "Tuesday"
+   },
+   {
+    "day": "Wednesday"
+   },
+   {
+    "day": "Thursday"
+   },
+   {
+    "day": "Friday"
+   },
+   {
+    "day": "Saturday"
+   },
+   {
+    "day": "Sunday"
+   }
+  ],
+  "close_condition": null,
+  "description": "Automatic Assignment",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Assignment Rule",
+  "document_type": "HD Ticket",
+  "due_date_based_on": null,
+  "field": null,
+  "last_user": null,
+  "modified": "2026-07-08 00:07:19.624821",
+  "name": "Sabre IT Support - Support Rotation-1",
+  "priority": 1,
+  "rule": "Round Robin",
+  "unassign_condition": "agent_group != 'Sabre IT Support'",
+  "unassign_condition_json": "[[\"agent_group\",\"!=\",\"Sabre IT Support\"]]",
+  "users": [
+   {
+    "user": "csm@sabre.com"
+   }
+  ]
+ },
+ {
+  "assign_condition": "status == 'Open' and agent_group == 'Sabre Frontline Helpdesk'",
+  "assign_condition_json": "[[\"status\",\"==\",\"Open\"],\"and\",[\"agent_group\",\"==\",\"Sabre Frontline Helpdesk\"]]",
+  "assignment_days": [
+   {
+    "day": "Monday"
+   },
+   {
+    "day": "Tuesday"
+   },
+   {
+    "day": "Wednesday"
+   },
+   {
+    "day": "Thursday"
+   },
+   {
+    "day": "Friday"
+   },
+   {
+    "day": "Saturday"
+   },
+   {
+    "day": "Sunday"
+   }
+  ],
+  "close_condition": null,
+  "description": "Automatic Assignment",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Assignment Rule",
+  "document_type": "HD Ticket",
+  "due_date_based_on": null,
+  "field": null,
+  "last_user": "csm@sabre.com",
+  "modified": "2026-07-09 00:12:52.578820",
+  "name": "Sabre Frontline Helpdesk - Support Rotation-1",
+  "priority": 1,
+  "rule": "Round Robin",
+  "unassign_condition": "agent_group != 'Sabre Frontline Helpdesk'",
+  "unassign_condition_json": "[[\"agent_group\",\"!=\",\"Sabre Frontline Helpdesk\"]]",
+  "users": [
+   {
+    "user": "csm@sabre.com"
+   }
+  ]
+ },
+ {
+  "assign_condition": "status == 'Open' and agent_group == 'Sabre Helpdesk Team'",
+  "assign_condition_json": "[[\"status\",\"==\",\"Open\"],\"and\",[\"agent_group\",\"==\",\"Sabre Helpdesk Team\"]]",
+  "assignment_days": [
+   {
+    "day": "Monday"
+   },
+   {
+    "day": "Tuesday"
+   },
+   {
+    "day": "Wednesday"
+   },
+   {
+    "day": "Thursday"
+   },
+   {
+    "day": "Friday"
+   },
+   {
+    "day": "Saturday"
+   },
+   {
+    "day": "Sunday"
+   }
+  ],
+  "close_condition": null,
+  "description": "Automatic Assignment",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Assignment Rule",
+  "document_type": "HD Ticket",
+  "due_date_based_on": null,
+  "field": null,
+  "last_user": null,
+  "modified": "2026-07-08 00:08:02.075031",
+  "name": "Sabre Helpdesk Team - Support Rotation-1",
+  "priority": 1,
+  "rule": "Round Robin",
+  "unassign_condition": "agent_group != 'Sabre Helpdesk Team'",
+  "unassign_condition_json": "[[\"agent_group\",\"!=\",\"Sabre Helpdesk Team\"]]",
+  "users": [
+   {
+    "user": "csm@sabre.com"
+   }
+  ]
+ },
+ {
+  "assign_condition": "status == 'Open' and agent_group == 'Sabre Finance Team'",
+  "assign_condition_json": "[[\"status\",\"==\",\"Open\"],\"and\",[\"agent_group\",\"==\",\"Sabre Finance Team\"]]",
+  "assignment_days": [
+   {
+    "day": "Monday"
+   },
+   {
+    "day": "Tuesday"
+   },
+   {
+    "day": "Wednesday"
+   },
+   {
+    "day": "Thursday"
+   },
+   {
+    "day": "Friday"
+   },
+   {
+    "day": "Saturday"
+   },
+   {
+    "day": "Sunday"
+   }
+  ],
+  "close_condition": null,
+  "description": "Automatic Assignment",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Assignment Rule",
+  "document_type": "HD Ticket",
+  "due_date_based_on": null,
+  "field": null,
+  "last_user": null,
+  "modified": "2026-07-08 00:09:01.822509",
+  "name": "Sabre Finance Team - Support Rotation-1",
+  "priority": 1,
+  "rule": "Round Robin",
+  "unassign_condition": "agent_group != 'Sabre Finance Team'",
+  "unassign_condition_json": "[[\"agent_group\",\"!=\",\"Sabre Finance Team\"]]",
+  "users": [
+   {
+    "user": "nouran@sabre.com"
+   }
+  ]
+ },
+ {
+  "assign_condition": "status == 'Open' and agent_group == 'Sabre Product Team'",
+  "assign_condition_json": "[[\"status\",\"==\",\"Open\"],\"and\",[\"agent_group\",\"==\",\"Sabre Product Team\"]]",
+  "assignment_days": [
+   {
+    "day": "Monday"
+   },
+   {
+    "day": "Tuesday"
+   },
+   {
+    "day": "Wednesday"
+   },
+   {
+    "day": "Thursday"
+   },
+   {
+    "day": "Friday"
+   },
+   {
+    "day": "Saturday"
+   },
+   {
+    "day": "Sunday"
+   }
+  ],
+  "close_condition": null,
+  "description": "Automatic Assignment",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Assignment Rule",
+  "document_type": "HD Ticket",
+  "due_date_based_on": null,
+  "field": null,
+  "last_user": null,
+  "modified": "2026-07-08 00:09:18.488344",
+  "name": "Sabre Product Team - Support Rotation-1",
+  "priority": 1,
+  "rule": "Round Robin",
+  "unassign_condition": "agent_group != 'Sabre Product Team'",
+  "unassign_condition_json": "[[\"agent_group\",\"!=\",\"Sabre Product Team\"]]",
+  "users": [
+   {
+    "user": "csm@sabre.com"
+   }
+  ]
+ },
+ {
   "assign_condition": "assigned_to == \"CSM\"",
   "assign_condition_json": null,
   "assignment_days": [
@@ -81,7 +363,7 @@
   "due_date_based_on": null,
   "field": null,
   "last_user": "m.raed@cx3.me",
-  "modified": "2026-06-22 10:12:05.466276",
+  "modified": "2026-07-27 12:39:22.452895",
   "name": "Sabre Product Team - Support Rotation",
   "priority": 1,
   "rule": "Round Robin",
@@ -316,7 +598,7 @@
   "due_date_based_on": null,
   "field": null,
   "last_user": "m.raed@cx3.me",
-  "modified": "2026-07-23 00:52:09.076851",
+  "modified": "2026-07-27 12:55:09.883791",
   "name": "Sabre Finance Team - Support Rotation",
   "priority": 1,
   "rule": "Round Robin",
@@ -363,7 +645,7 @@
   "due_date_based_on": null,
   "field": null,
   "last_user": "m.raed@cx3.me",
-  "modified": "2026-06-21 16:00:11.214821",
+  "modified": "2026-07-27 13:38:23.867229",
   "name": "Sabre IT Support - Support Rotation",
   "priority": 1,
   "rule": "Round Robin",
@@ -410,7 +692,7 @@
   "due_date_based_on": null,
   "field": null,
   "last_user": "m.raed@cx3.me",
-  "modified": "2026-07-23 17:49:27.006720",
+  "modified": "2026-07-30 14:59:00.008077",
   "name": "Sabre Frontline Helpdesk - Support Rotation",
   "priority": 1,
   "rule": "Round Robin",

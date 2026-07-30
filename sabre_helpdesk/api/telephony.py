@@ -8,6 +8,9 @@ def on_call_log_created(doc, method):
     if doc.get("medium") != "3CX":
         return
 
+    original_user = frappe.session.user
+    frappe.set_user("Administrator")
+
     # الـ "customer" الجاي من الـ Call Log ممكن يكون اسم Contact/موظف
     # اتطابق برقم الهاتف مش سجل Customer حقيقي - نتأكد الأول عشان
     # ماتفشلش عملية إنشاء التذكرة بالكامل بسبب LinkValidationError
@@ -18,10 +21,13 @@ def on_call_log_created(doc, method):
     try:
         ticket = frappe.get_doc({
             "doctype": "HD Ticket",
-            "subject": f"Incoming call from {doc.get('from') or 'Unknown'}",
+            "subject": doc.get("custom_subject") or f"Incoming call from {doc.get('from') or 'Unknown'}",
             "ticket_type": "Phone Call",
             "agent_group": "Sabre Frontline Helpdesk",
             "customer": customer,
+            "description": doc.get("summary") or "",
+            "raised_by": "",
+            "custom_phone_number": doc.get("from") or "",
         })
         ticket.insert(ignore_permissions=True)
 
@@ -53,3 +59,5 @@ def on_call_log_created(doc, method):
         # نرجع الخطوات كلها عشان مانسيبش تذكرة بدون سجل مكالمة مرتبط بيها
         frappe.db.rollback()
         frappe.log_error(frappe.get_traceback(), "Sabre Helpdesk: Call to Ticket Error")
+    finally:
+        frappe.set_user(original_user)
