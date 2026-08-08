@@ -13,12 +13,28 @@
   "link_to": "Sabre Support",
   "link_type": "Workspace Sidebar",
   "logo_url": null,
-  "modified": "2026-07-26 11:51:14.541290",
+  "modified": "2026-08-03 15:50:35.645097",
   "name": "Sabre Support",
   "parent_icon": null,
   "restrict_removal": 0,
-  "roles": [],
+  "roles": [
+   {
+    "role": "Support Leadership"
+   },
+   {
+    "role": "Support Associate"
+   },
+   {
+    "role": "Support Senior"
+   },
+   {
+    "role": "Support Team Supervisor"
+   },
+   {
+    "role": "Support Operations Manager"
+   }
+  ],
   "sidebar": null,
-  "standard": 0
+  "standard": 1
  }
 ]

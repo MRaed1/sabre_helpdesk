@@ -1,11 +1,11 @@
 [
  {
-  "description": "مشكلة انترنت",
+  "description": "",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Ticket Type",
   "is_system": 0,
-  "modified": "2026-07-23 21:06:57.026403",
+  "modified": "2026-08-04 12:29:48.619612",
   "name": "Phone Call",
   "priority": null
  }

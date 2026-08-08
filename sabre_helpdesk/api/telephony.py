@@ -11,29 +11,10 @@ def on_call_log_created(doc, method):
     original_user = frappe.session.user
     frappe.set_user("Administrator")
 
-    # الـ "customer" الجاي من الـ Call Log ممكن يكون اسم Contact/موظف
-    # اتطابق برقم الهاتف مش سجل Customer حقيقي - نتأكد الأول عشان
-    # ماتفشلش عملية إنشاء التذكرة بالكامل بسبب LinkValidationError
-    customer = doc.get("customer")
-    if customer and not frappe.db.exists("Customer", customer):
-        customer = None
-
     try:
-        ticket = frappe.get_doc({
-            "doctype": "HD Ticket",
-            "subject": doc.get("custom_subject") or f"Incoming call from {doc.get('from') or 'Unknown'}",
-            "ticket_type": "Phone Call",
-            "agent_group": "Sabre Frontline Helpdesk",
-            "customer": customer,
-            "description": doc.get("summary") or "",
-            "raised_by": "",
-            "custom_phone_number": doc.get("from") or "",
-        })
-        ticket.insert(ignore_permissions=True)
+        # تم إلغاء إنشاء HD Ticket هنا لمنع التكرار والإكتفاء بالتذكرة المنشأة من cx3_call
 
-        doc.append("links", {"link_doctype": "HD Ticket", "link_name": ticket.name})
-        doc.save(ignore_permissions=True)
-
+        # حفظ سجل المكالمة في TP Call Log فقط
         tp_call = frappe.get_doc({
             "doctype": "TP Call Log",
             "id": doc.name or random_string(10),
@@ -48,16 +29,10 @@ def on_call_log_created(doc, method):
             "recording_url": doc.get("recording_url"),
         })
         tp_call.insert(ignore_permissions=True)
-
-        tp_call.append("links", {"link_doctype": "HD Ticket", "link_name": ticket.name})
-        tp_call.save(ignore_permissions=True)
-
         frappe.db.commit()
 
     except Exception:
-        # لو أي خطوة فشلت (زي إنشاء TP Call Log بعد نجاح HD Ticket)،
-        # نرجع الخطوات كلها عشان مانسيبش تذكرة بدون سجل مكالمة مرتبط بيها
         frappe.db.rollback()
-        frappe.log_error(frappe.get_traceback(), "Sabre Helpdesk: Call to Ticket Error")
+        frappe.log_error(frappe.get_traceback(), "Sabre Helpdesk: Call Log Error")
     finally:
         frappe.set_user(original_user)
