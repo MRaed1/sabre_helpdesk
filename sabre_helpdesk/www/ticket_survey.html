@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Survey - Ticket #{{ ticket_name }}</title>
+    <style>
+        body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: #f4f5f7; margin: 0; padding: 0; }
+        .survey-card { max-width: 550px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .q-group { margin-bottom: 20px; }
+        .q-title { font-weight: 600; margin-bottom: 10px; display: block; }
+        label { display: block; margin-bottom: 8px; cursor: pointer; }
+        textarea { width: 100%; height: 80px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-family: inherit; }
+        .btn-submit { background: #0052cc; color: white; border: none; padding: 12px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%; font-weight: bold; }
+        .btn-submit:hover { background: #0065ff; }
+    </style>
+</head>
+<body>
+
+{% if error %}
+    <div class="survey-card"><p>{{ error }}</p></div>
+{% elif submitted %}
+    <div class="survey-card">
+        <p>Your feedback for ticket <b>#{{ ticket_name }}</b> has been recorded successfully. Thank you!</p>
+    </div>
+{% else %}
+<div class="survey-card">
+    <p>Ticket: <b>#{{ ticket_name }}</b></p>
+    <form method="POST" action="/ticket_survey?ticket={{ ticket_name }}">
+
+        <div class="q-group">
+            <span class="q-title">1. How satisfied were you with Sabre system/Product?</span>
+            <label><input type="radio" name="q1" value="Satisfied" required> Satisfied</label>
+            <label><input type="radio" name="q1" value="Somehow Satisfied"> Somehow Satisfied</label>
+            <label><input type="radio" name="q1" value="Not Satisfied"> Not Satisfied</label>
+        </div>
+
+        <div class="q-group">
+            <span class="q-title">2. How satisfied were you with Sabre support?</span>
+            <label><input type="radio" name="q2" value="Satisfied" required> Satisfied</label>
+            <label><input type="radio" name="q2" value="Somehow Satisfied"> Somehow Satisfied</label>
+            <label><input type="radio" name="q2" value="Not Satisfied"> Not Satisfied</label>
+        </div>
+
+        <div class="q-group">
+            <span class="q-title">3. How satisfied were you with the speed to reach out to the support?</span>
+            <label><input type="radio" name="q3" value="Satisfied" required> Satisfied</label>
+            <label><input type="radio" name="q3" value="Somehow Satisfied"> Somehow Satisfied</label>
+            <label><input type="radio" name="q3" value="Not Satisfied"> Not Satisfied</label>
+        </div>
+
+        <div class="q-group">
+            <span class="q-title">Additional Comments (Optional)</span>
+            <textarea name="comments" placeholder="Write any extra details here..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit Survey</button>
+    </form>
+</div>
+{% endif %}
+
+</body>
+</html>
