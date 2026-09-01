@@ -27,6 +27,7 @@
 <div class="survey-card">
     <p>Ticket: <b>#{{ ticket_name }}</b></p>
     <form method="POST" action="/ticket_survey?ticket={{ ticket_name }}">
+        <input type="hidden" name="csrf_token" value="{{ frappe.session.csrf_token }}">
 
         <div class="q-group">
             <span class="q-title">1. How satisfied were you with Sabre system/Product?</span>
