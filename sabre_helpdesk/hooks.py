@@ -259,48 +259,100 @@ doc_events = {
 
 fixtures = [
     {
-        "dt": "HD Ticket Type", 
+        "doctype": "HD Ticket Type",
         "filters": [["name", "=", "Phone Call"]]
     },
     {
-        "dt": "Custom Field",
-        "filters": [["dt", "in", ["HD Ticket", "Task"]]]
+        "doctype": "HD Team",
+        "filters": [["name", "in", [
+            "L3 Supervisor Team",
+            "Sabre CSM Team",
+            "L2 Senior Team",
+            "L1 Associate Team",
+            "Sabre Product Team",
+            "Sabre Finance Team",
+            "Sabre Helpdesk Team",
+            "Sabre Frontline Helpdesk",
+            "Sabre IT Support",
+            "Product Experts",
+            "Billing"
+        ]]]
     },
     {
-        "dt": "Client Script",
+        "doctype": "Custom Field",
+        "filters": [["dt", "in", ["HD Ticket", "Task", "Contact", "HD Customer"]]]
+    },
+    {
+        "doctype": "Client Script",
         "filters": [["name", "=", "HD Ticket - Create Task Button"]]
     },
     {
-        "dt": "Server Script",
+        "doctype": "Server Script",
         "filters": [["name", "=", "HD Ticket - CRM Lookup & Routing"]]
     },
     {
-        "dt": "Workflow",
+        "doctype": "Server Script",
+        "filters": [["name", "in", [
+            "Sabre HD - Agency Match",
+            "HD Ticket - Auto Assign & Log Handler",
+            "Auto Link Call Log to Ticket",
+            "Auto Link Ticket and Call Log",
+            "Git Name of Customer From Sabre Agency To Call log"
+        ]]]
+    },
+    {
+        "doctype": "Workflow",
         "filters": [["name", "=", "HD Ticket Workflow"]]
     },
     {
-        "dt": "Notification",
-        "filters": [
-            ["name", "=", "Send Auto Acknowledgment on New Ticket"]]
+        "doctype": "Notification",
+        "filters": [["name", "=", "Send Auto Acknowledgment on New Ticket"]]
     },
     {
-        "dt": "Assignment Rule",
-        "filters": [["name", "like", "Sabre%"]]
+        "doctype": "Assignment Rule",
+        "filters": [["document_type", "=", "HD Ticket"]]
     },
     {
-        "dt": "Workspace",
+        "doctype": "Role",
+        "filters": [["name", "in", [
+            "Support Leadership",
+            "Support Operations Manager",
+            "Support Team Supervisor",
+            "Support Senior",
+            "Support Associate",
+            "SLA Reports Viewer"
+        ]]]
+    },
+    {
+        "doctype": "Custom DocPerm",
+        "filters": [["parent", "in", ["HD Customer", "Contact"]]]
+    },
+    {
+        "doctype": "Report",
+        "filters": [["name", "in", [
+            "SLA - Breached Tickets",
+            "SLA - Priority Summary",
+            "SLA - Agent Summary",
+            "SLA - Team Summary",
+            "SLA - Ticket Details",
+            "Call Log - Agent Summary",
+            "Call Log - Details"
+        ]]]
+    },
+    {
+        "doctype": "Workspace",
         "filters": [["name", "=", "Sabre Support"]]
     },
     {
-        "dt": "Workspace Sidebar",
+        "doctype": "Workspace Sidebar",
         "filters": [["app", "=", "sabre_helpdesk"]]
     },
     {
-        "dt": "Desktop Icon",
+        "doctype": "Desktop Icon",
         "filters": [["name", "in", ["Sabre Support"]]]
     },
     {
-        "dt": "Dashboard Chart",
+        "doctype": "Dashboard Chart",
         "filters": [["name", "in", ["Tickets by Status", "Tickets by Source"]]]
     }
 ]

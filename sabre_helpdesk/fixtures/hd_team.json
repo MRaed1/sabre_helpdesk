@@ -1,0 +1,192 @@
+[
+ {
+  "assignment_rule": "Sabre IT Support - Support Rotation-1",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-07-08 00:07:19.590568",
+  "name": "Sabre IT Support",
+  "team_name": "Sabre IT Support",
+  "users": [
+   {
+    "user": "csm@sabre.com"
+   }
+  ]
+ },
+ {
+  "assignment_rule": "Sabre Helpdesk Team - Support Rotation-1",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-07-08 00:08:02.047914",
+  "name": "Sabre Helpdesk Team",
+  "team_name": "Sabre Helpdesk Team",
+  "users": [
+   {
+    "user": "csm@sabre.com"
+   }
+  ]
+ },
+ {
+  "assignment_rule": "Sabre Finance Team - Support Rotation-1",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-07-08 00:09:01.783629",
+  "name": "Sabre Finance Team",
+  "team_name": "Sabre Finance Team",
+  "users": [
+   {
+    "user": "nouran@sabre.com"
+   }
+  ]
+ },
+ {
+  "assignment_rule": "Sabre Product Team - Support Rotation-1",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-07-08 00:09:18.452989",
+  "name": "Sabre Product Team",
+  "team_name": "Sabre Product Team",
+  "users": [
+   {
+    "user": "csm@sabre.com"
+   }
+  ]
+ },
+ {
+  "assignment_rule": "L2 Senior Team - Support Rotation",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-08-04 11:58:12.012871",
+  "name": "L2 Senior Team",
+  "team_name": "L2 Senior Team",
+  "users": [
+   {
+    "user": "pakinam.ismail@sabre.com"
+   },
+   {
+    "user": "ahmed.selim@sabre.com"
+   },
+   {
+    "user": "madonna.ibrahim@sabre.com"
+   },
+   {
+    "user": "ahmed.abdelwahab@sabre.com"
+   },
+   {
+    "user": "admin@sabre.com"
+   }
+  ]
+ },
+ {
+  "assignment_rule": "L3 Supervisor Team - Support Rotation",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-08-13 12:07:14.000294",
+  "name": "L3 Supervisor Team",
+  "team_name": "L3 Supervisor Team",
+  "users": [
+   {
+    "user": "walid.morsy@sabre.com"
+   },
+   {
+    "user": "admin@sabre.com"
+   }
+  ]
+ },
+ {
+  "assignment_rule": "Billing - Support Rotation",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-06-29 12:44:47.839901",
+  "name": "Billing",
+  "team_name": "Billing",
+  "users": []
+ },
+ {
+  "assignment_rule": "Sabre CSM Team - Support Rotation-1",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-08-07 14:47:45.325507",
+  "name": "Sabre CSM Team",
+  "team_name": "Sabre CSM Team",
+  "users": [
+   {
+    "user": "csm@sabre.com"
+   },
+   {
+    "user": "nayera.ammar@sabre.com"
+   },
+   {
+    "user": "zyad.hamed@sabre.com"
+   }
+  ]
+ },
+ {
+  "assignment_rule": "Sabre Frontline Helpdesk - Support Rotation-1",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-07-08 00:07:41.770314",
+  "name": "Sabre Frontline Helpdesk",
+  "team_name": "Sabre Frontline Helpdesk",
+  "users": [
+   {
+    "user": "csm@sabre.com"
+   }
+  ]
+ },
+ {
+  "assignment_rule": "L1 Associate Team - Support Rotation",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-08-04 11:58:11.956622",
+  "name": "L1 Associate Team",
+  "team_name": "L1 Associate Team",
+  "users": [
+   {
+    "user": "abdallah.nasr@sabre.com"
+   },
+   {
+    "user": "ahmed.yasser@sabre.com"
+   },
+   {
+    "user": "mohamed.taha@sabre.com"
+   },
+   {
+    "user": "admin@sabre.com"
+   },
+   {
+    "user": "nada.agamy@sabre.com"
+   }
+  ]
+ },
+ {
+  "assignment_rule": "Product Experts - Support Rotation",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "HD Team",
+  "ignore_restrictions": 0,
+  "modified": "2026-06-29 12:44:47.912414",
+  "name": "Product Experts",
+  "team_name": "Product Experts",
+  "users": []
+ }
+]

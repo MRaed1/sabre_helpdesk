@@ -1,0 +1,321 @@
+[
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-14 01:56:25.551884",
+  "module": "Sabre Helpdesk",
+  "name": "SLA - Breached Tickets",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    t.name AS \"Ticket ID:Link/HD Ticket:100\",\r\n    t.custom_channel AS \"Channel:Data:120\",\r\n    t.ticket_type AS \"Ticket Type:Link/HD Ticket Type:130\",\r\n    t.subject AS \"Subject:Data:250\",\r\n    t.raised_by AS \"Raised By:Data:180\",\r\n    t.custom_phone_number AS \"Phone Number:Data:130\",\r\n    t.custom_agency AS \"Agency:Link/Sabre Agency:180\",\r\n    t.custom_contact_name AS \"Contact Name:Data:150\",\r\n    t.custom_agency_pcc AS \"PCC:Data:100\",\r\n    t.custom_agency_iata AS \"IATA:Data:100\",\r\n    t.custom_subissue AS \"Sub-Issue:Data:180\",\r\n    t.agent_group AS \"Team:Link/HD Team:150\",\r\n    t.priority AS \"Priority:Link/HD Ticket Priority:100\",\r\n    t.status AS \"Status:Link/HD Ticket Status:100\",\r\n    t.response_by AS \"Response Due:Datetime:150\",\r\n    t.first_response_failed_by AS \"Response Overdue By:Duration:150\",\r\n    t.resolution_by AS \"Resolution Due:Datetime:150\",\r\n    t.resolution_failed_by AS \"Resolution Overdue By:Duration:150\"\r\nFROM `tabHD Ticket` t\r\nWHERE t.agreement_status = 'Failed' AND t.docstatus < 2\r\nORDER BY t.resolution_by ASC",
+  "ref_doctype": "HD Ticket",
+  "reference_report": null,
+  "report_name": "SLA - Breached Tickets",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Agent Manager"
+   },
+   {
+    "role": "All"
+   },
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Agent"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": "2026-08-01",
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "From Date",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   },
+   {
+    "default": "2026-08-08",
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "To Date",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-09 16:39:45.749447",
+  "module": "Sabre Helpdesk",
+  "name": "Call Log - Agent Summary",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    cl.employee_user_id AS \"Agent:Link/User:180\",\r\n    COUNT(*) AS \"Total Calls:Int:120\",\r\n    SUM(CASE WHEN cl.type = 'Incoming' THEN 1 ELSE 0 END) AS \"Incoming:Int:100\",\r\n    SUM(CASE WHEN cl.type = 'Outgoing' THEN 1 ELSE 0 END) AS \"Outgoing:Int:100\",\r\n    SUM(CASE WHEN cl.status = 'Completed' THEN 1 ELSE 0 END) AS \"Answered:Int:100\",\r\n    SUM(CASE WHEN cl.status = 'No Answer' THEN 1 ELSE 0 END) AS \"Missed:Int:100\",\r\n    SEC_TO_TIME(SUM(cl.duration)) AS \"Total Talk Time:Data:150\"\r\nFROM `tabCall Log` cl\r\nWHERE cl.employee_user_id IS NOT NULL AND cl.employee_user_id != ''\r\n    AND DATE(cl.creation) BETWEEN %(from_date)s AND %(to_date)s\r\nGROUP BY cl.employee_user_id\r\nORDER BY 2 DESC",
+  "ref_doctype": "Call Log",
+  "reference_report": null,
+  "report_name": "Call Log - Agent Summary",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Support Leadership"
+   },
+   {
+    "role": "Support Operations Manager"
+   },
+   {
+    "role": "Support Team Supervisor"
+   },
+   {
+    "role": "Support Senior"
+   },
+   {
+    "role": "Support Associate"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": "2026-08-01",
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "From Date",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   },
+   {
+    "default": "2026-08-08",
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "To Date",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   },
+   {
+    "default": "",
+    "fieldname": "agent",
+    "fieldtype": "Link",
+    "label": "Agent",
+    "mandatory": 1,
+    "options": "User",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-09 16:42:06.880285",
+  "module": "Sabre Helpdesk",
+  "name": "Call Log - Details",
+  "prepared_report": 0,
+  "query": "SELECT\n    cl.name AS \"Call ID:Link/Call Log:120\",\n    cl.creation AS \"Date & Time:Datetime:160\",\n    cl.type AS \"Type:Data:100\",\n    cl.status AS \"Status:Data:110\",\n    cl.`from` AS \"From:Data:180\",\n    cl.`to` AS \"To:Data:180\",\n    cl.employee_user_id AS \"Agent:Link/User:180\",\n    SEC_TO_TIME(cl.duration) AS \"Duration:Data:120\"\nFROM `tabCall Log` cl\nWHERE DATE(cl.creation) BETWEEN %(from_date)s AND %(to_date)s\n    AND (%(agent)s = '' OR cl.employee_user_id = %(agent)s)\nORDER BY cl.creation DESC",
+  "ref_doctype": "Call Log",
+  "reference_report": null,
+  "report_name": "Call Log - Details",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Support Leadership"
+   },
+   {
+    "role": "Support Operations Manager"
+   },
+   {
+    "role": "Support Team Supervisor"
+   },
+   {
+    "role": "Support Senior"
+   },
+   {
+    "role": "Support Associate"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-02 10:47:46.109572",
+  "module": "Sabre Helpdesk",
+  "name": "SLA - Priority Summary",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    t.priority AS \"Priority:Link/HD Ticket Priority:120\",\r\n    COUNT(*) AS \"Total Tickets:Int:100\",\r\n    SUM(CASE WHEN t.agreement_status = 'Failed' THEN 1 ELSE 0 END) AS \"Breached:Int:100\",\r\n    ROUND(SUM(CASE WHEN t.agreement_status = 'Fulfilled' THEN 1 ELSE 0 END) / COUNT(*) * 100, 1) AS \"SLA Compliance %%:Percent:120\",\r\n    SEC_TO_TIME(AVG(t.first_response_time)) AS \"Avg First Response:Data:150\",\r\n    SEC_TO_TIME(AVG(t.resolution_time)) AS \"Avg Resolution Time:Data:150\"\r\nFROM `tabHD Ticket` t\r\nWHERE t.docstatus < 2\r\nGROUP BY t.priority\r\nORDER BY 2 DESC",
+  "ref_doctype": "HD Ticket",
+  "reference_report": null,
+  "report_name": "SLA - Priority Summary",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Agent Manager"
+   },
+   {
+    "role": "All"
+   },
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Agent"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-14 01:52:07.889500",
+  "module": "Sabre Helpdesk",
+  "name": "SLA - Ticket Details",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    t.name AS \"Ticket ID:Link/HD Ticket:100\",\r\n    t.custom_channel AS \"Channel:Data:120\",\r\n    t.ticket_type AS \"Ticket Type:Link/HD Ticket Type:130\",\r\n    t.subject AS \"Subject:Data:250\",\r\n    t.raised_by AS \"Raised By:Data:180\",\r\n    t.custom_phone_number AS \"Phone Number:Data:130\",\r\n    t.custom_agency AS \"Agency:Link/Sabre Agency:180\",\r\n    t.custom_contact_name AS \"Contact Name:Data:150\",\r\n    t.custom_agency_pcc AS \"PCC:Data:100\",\r\n    t.custom_agency_iata AS \"IATA:Data:100\",\r\n    t.custom_subissue AS \"Sub-Issue:Data:180\",\r\n    t.agent_group AS \"Team:Link/HD Team:150\",\r\n    t.priority AS \"Priority:Link/HD Ticket Priority:100\",\r\n    t.status AS \"Status:Link/HD Ticket Status:100\",\r\n    t.opening_date AS \"Opened On:Date:100\",\r\n    t.response_by AS \"Response Due:Datetime:150\",\r\n    t.first_response_time AS \"First Response Time:Duration:150\",\r\n    t.first_response_failed_by AS \"Response Overdue By:Duration:150\",\r\n    t.resolution_by AS \"Resolution Due:Datetime:150\",\r\n    t.resolution_date AS \"Resolved On:Datetime:150\",\r\n    t.resolution_time AS \"Resolution Time:Duration:150\",\r\n    t.resolution_failed_by AS \"Resolution Overdue By:Duration:150\",\r\n    t.agreement_status AS \"SLA Status:Data:120\",\r\n    t.feedback_rating AS \"Feedback Rating:Rating:120\",\r\n    t.feedback AS \"Feedback Option:Link/HD Ticket Feedback Option:200\",\r\n    t.feedback_extra AS \"Feedback Comments:Small Text:250\"\r\nFROM `tabHD Ticket` t\r\nWHERE t.docstatus < 2\r\nORDER BY t.opening_date DESC",
+  "ref_doctype": "HD Ticket",
+  "reference_report": null,
+  "report_name": "SLA - Ticket Details",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Agent Manager"
+   },
+   {
+    "role": "All"
+   },
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Agent"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-02 10:45:40.852598",
+  "module": "Sabre Helpdesk",
+  "name": "SLA - Team Summary",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    t.agent_group AS \"Team:Link/HD Team:150\",\r\n    COUNT(*) AS \"Total Tickets:Int:100\",\r\n    SUM(CASE WHEN t.agreement_status = 'Failed' THEN 1 ELSE 0 END) AS \"Breached:Int:100\",\r\n    SUM(CASE WHEN t.agreement_status = 'Fulfilled' THEN 1 ELSE 0 END) AS \"Fulfilled:Int:100\",\r\n    ROUND(SUM(CASE WHEN t.agreement_status = 'Fulfilled' THEN 1 ELSE 0 END) / COUNT(*) * 100, 1) AS \"SLA Compliance %%:Percent:120\",\r\n    SEC_TO_TIME(AVG(t.first_response_time)) AS \"Avg First Response:Data:150\",\r\n    SEC_TO_TIME(AVG(t.resolution_time)) AS \"Avg Resolution Time:Data:150\"\r\nFROM `tabHD Ticket` t\r\nWHERE t.docstatus < 2\r\nGROUP BY t.agent_group\r\nORDER BY 2 DESC",
+  "ref_doctype": "HD Ticket",
+  "reference_report": null,
+  "report_name": "SLA - Team Summary",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Agent Manager"
+   },
+   {
+    "role": "All"
+   },
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Agent"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-02 10:46:56.249001",
+  "module": "Sabre Helpdesk",
+  "name": "SLA - Agent Summary",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    todo.allocated_to AS \"Agent:Link/User:150\",\r\n    COUNT(DISTINCT t.name) AS \"Total Tickets:Int:100\",\r\n    SUM(CASE WHEN t.agreement_status = 'Failed' THEN 1 ELSE 0 END) AS \"Breached:Int:100\",\r\n    ROUND(SUM(CASE WHEN t.agreement_status = 'Fulfilled' THEN 1 ELSE 0 END) / COUNT(DISTINCT t.name) * 100, 1) AS \"SLA Compliance %%:Percent:120\",\r\n    SEC_TO_TIME(AVG(t.first_response_time)) AS \"Avg First Response:Data:150\",\r\n    SEC_TO_TIME(AVG(t.resolution_time)) AS \"Avg Resolution Time:Data:150\"\r\nFROM `tabHD Ticket` t\r\nJOIN `tabToDo` todo\r\n    ON todo.reference_type = 'HD Ticket'\r\n    AND todo.reference_name = t.name\r\n    AND todo.status != 'Cancelled'\r\nWHERE t.docstatus < 2\r\nGROUP BY todo.allocated_to\r\nORDER BY 2 DESC",
+  "ref_doctype": "HD Ticket",
+  "reference_report": null,
+  "report_name": "SLA - Agent Summary",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Agent Manager"
+   },
+   {
+    "role": "All"
+   },
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Agent"
+   }
+  ],
+  "timeout": 0
+ }
+]
