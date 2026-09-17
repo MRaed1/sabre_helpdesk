@@ -352,8 +352,20 @@ fixtures = [
         "filters": [["name", "in", ["Sabre Support"]]]
     },
     {
-        "doctype": "Dashboard Chart",
-        "filters": [["name", "in", ["Tickets by Status", "Tickets by Source"]]]
+        "doctype": "Dashboard",
+        "filters": [["module", "=", "Sabre Helpdesk"]]
+    },
+    {
+        "doctype": "Number Card",
+        "filters": [["module", "=", "Sabre Helpdesk"]]
+    },
+    {
+        "doctype": "Print Format",
+        "filters": [["module", "=", "Sabre Helpdesk"]]
+    },
+    {
+        "doctype": "Custom HTML Block",
+        "filters": [["name", "in", ["Support Tickets Breakdown Chart"]]]
     }
 ]
 after_migrate = ["sabre_helpdesk.setup.import_workspace"]
