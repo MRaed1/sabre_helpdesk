@@ -19,8 +19,7 @@ def get_context(context):
             comments = frappe.form_dict.get("comments") or "No additional comments"
 
             s1, s2, s3 = score_map.get(q1, 3), score_map.get(q2, 3), score_map.get(q3, 3)
-            avg_rating_5 = round((s1 + s2 + s3) / 3)
-            rating_0_1 = avg_rating_5 / 5
+            rating_0_1 = round((s1 + s2 + s3) / 15, 4)
 
             # اختيار أقرب Feedback Option بناءً على أقرب rating
             options = frappe.get_all("HD Ticket Feedback Option", fields=["name", "rating"])

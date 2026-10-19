@@ -1,36 +1,6 @@
 [
  {
-  "assignment_rule": "Sabre IT Support - Support Rotation-2",
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "HD Team",
-  "ignore_restrictions": 0,
-  "modified": "2026-07-08 00:07:19.590568",
-  "name": "Sabre IT Support",
-  "team_name": "Sabre IT Support",
-  "users": [
-   {
-    "user": "csm@sabre.com"
-   }
-  ]
- },
- {
-  "assignment_rule": "Sabre Helpdesk Team - Support Rotation-2",
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "HD Team",
-  "ignore_restrictions": 0,
-  "modified": "2026-07-08 00:08:02.047914",
-  "name": "Sabre Helpdesk Team",
-  "team_name": "Sabre Helpdesk Team",
-  "users": [
-   {
-    "user": "csm@sabre.com"
-   }
-  ]
- },
- {
-  "assignment_rule": "Sabre Finance Team - Support Rotation-2",
+  "assignment_rule": "Sabre Finance Team - Support Rotation-6",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
@@ -45,22 +15,22 @@
   ]
  },
  {
-  "assignment_rule": "Sabre Product Team - Support Rotation-2",
+  "assignment_rule": "Sabre Product Team - Support Rotation-6",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
   "ignore_restrictions": 0,
-  "modified": "2026-07-08 00:09:18.452989",
+  "modified": "2026-09-30 12:53:50.791951",
   "name": "Sabre Product Team",
   "team_name": "Sabre Product Team",
   "users": [
    {
-    "user": "csm@sabre.com"
+    "user": "sarah.raafat@sabre-egy.com"
    }
   ]
  },
  {
-  "assignment_rule": "L2 Senior Team - Support Rotation-1",
+  "assignment_rule": "L2 Senior Team - Support Rotation-5",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
@@ -70,57 +40,39 @@
   "team_name": "L2 Senior Team",
   "users": [
    {
-    "user": "pakinam.ismail@sabre.com"
+    "user": "pakinam.ismail@sabre-egy.com"
    },
    {
-    "user": "ahmed.selim@sabre.com"
+    "user": "ahmed.selim@sabre-egy.com"
    },
    {
-    "user": "madonna.ibrahim@sabre.com"
+    "user": "madonna.ibrahim@sabre-egy.com"
    },
    {
-    "user": "ahmed.abdelwahab@sabre.com"
-   },
-   {
-    "user": "admin@sabre.com"
+    "user": "ahmed.abdelwahab@sabre-egy.com"
    }
   ]
  },
  {
-  "assignment_rule": "L3 Supervisor Team - Support Rotation-1",
+  "assignment_rule": "L3 Supervisor Team - Support Rotation-5",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
   "ignore_restrictions": 0,
-  "modified": "2026-08-13 12:07:14.000294",
+  "modified": "2026-09-30 12:53:50.459776",
   "name": "L3 Supervisor Team",
   "team_name": "L3 Supervisor Team",
   "users": [
    {
-    "user": "walid.morsy@sabre.com"
+    "user": "walid.morsy@sabre-egy.com"
    },
    {
-    "user": "admin@sabre.com"
+    "user": "amal.ezzeldin@sabre-egy.com"
    }
   ]
  },
  {
-  "assignment_rule": "Billing - Support Rotation-1",
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "HD Team",
-  "ignore_restrictions": 0,
-  "modified": "2026-06-29 12:44:47.839901",
-  "name": "Billing",
-  "team_name": "Billing",
-  "users": [
-   {
-    "user": "admin@sabre.com"
-   }
-  ]
- },
- {
-  "assignment_rule": "Sabre CSM Team - Support Rotation-2",
+  "assignment_rule": "Sabre CSM Team - Support Rotation-6",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
@@ -130,48 +82,15 @@
   "team_name": "Sabre CSM Team",
   "users": [
    {
-    "user": "csm@sabre.com"
+    "user": "nayera.ammar@sabre-egy.com"
    },
    {
-    "user": "nayera.ammar@sabre.com"
-   },
-   {
-    "user": "zyad.hamed@sabre.com"
+    "user": "zyad.hamed@sabre-egy.com"
    }
   ]
  },
  {
-  "assignment_rule": "Sabre Frontline Helpdesk - Support Rotation-2",
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "HD Team",
-  "ignore_restrictions": 0,
-  "modified": "2026-07-08 00:07:41.770314",
-  "name": "Sabre Frontline Helpdesk",
-  "team_name": "Sabre Frontline Helpdesk",
-  "users": [
-   {
-    "user": "csm@sabre.com"
-   }
-  ]
- },
- {
-  "assignment_rule": "Product Experts - Support Rotation-1",
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "HD Team",
-  "ignore_restrictions": 0,
-  "modified": "2026-06-29 12:44:47.912414",
-  "name": "Product Experts",
-  "team_name": "Product Experts",
-  "users": [
-   {
-    "user": "admin@sabre.com"
-   }
-  ]
- },
- {
-  "assignment_rule": "L1 Associate Team - Support Rotation-1",
+  "assignment_rule": "L1 Associate Team - Support Rotation-5",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
@@ -181,19 +100,16 @@
   "team_name": "L1 Associate Team",
   "users": [
    {
-    "user": "abdallah.nasr@sabre.com"
+    "user": "abdallah.nasr@sabre-egy.com"
    },
    {
-    "user": "ahmed.yasser@sabre.com"
+    "user": "ahmed.yasser@sabre-egy.com"
    },
    {
-    "user": "mohamed.taha@sabre.com"
+    "user": "mohamed.taha@sabre-egy.com"
    },
    {
-    "user": "admin@sabre.com"
-   },
-   {
-    "user": "nada.agamy@sabre.com"
+    "user": "nada.agamy@sabre-egy.com"
    }
   ]
  }

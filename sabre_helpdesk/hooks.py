@@ -271,11 +271,6 @@ fixtures = [
             "L1 Associate Team",
             "Sabre Product Team",
             "Sabre Finance Team",
-            "Sabre Helpdesk Team",
-            "Sabre Frontline Helpdesk",
-            "Sabre IT Support",
-            "Product Experts",
-            "Billing"
         ]]]
     },
     {
