@@ -1,6 +1,6 @@
 [
  {
-  "assignment_rule": "Sabre Finance Team - Support Rotation-10",
+  "assignment_rule": null,
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
@@ -15,7 +15,7 @@
   ]
  },
  {
-  "assignment_rule": "Sabre Product Team - Support Rotation-10",
+  "assignment_rule": null,
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
@@ -30,7 +30,7 @@
   ]
  },
  {
-  "assignment_rule": "L3 Supervisor Team - Support Rotation-9",
+  "assignment_rule": null,
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
@@ -48,7 +48,7 @@
   ]
  },
  {
-  "assignment_rule": "Sabre CSM Team - Support Rotation-10",
+  "assignment_rule": null,
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
@@ -66,7 +66,7 @@
   ]
  },
  {
-  "assignment_rule": "L2 Senior Team - Support Rotation-9",
+  "assignment_rule": null,
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
@@ -90,7 +90,7 @@
   ]
  },
  {
-  "assignment_rule": "L1 Associate Team - Support Rotation-9",
+  "assignment_rule": null,
   "disabled": 0,
   "docstatus": 0,
   "doctype": "HD Team",
