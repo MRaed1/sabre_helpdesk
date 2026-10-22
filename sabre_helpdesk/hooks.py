@@ -263,17 +263,6 @@ fixtures = [
         "filters": [["name", "=", "Phone Call"]]
     },
     {
-        "doctype": "HD Team",
-        "filters": [["name", "in", [
-            "L3 Supervisor Team",
-            "Sabre CSM Team",
-            "L2 Senior Team",
-            "L1 Associate Team",
-            "Sabre Product Team",
-            "Sabre Finance Team",
-        ]]]
-    },
-    {
         "doctype": "Custom Field",
         "filters": [["dt", "in", ["HD Ticket", "Task", "Contact", "HD Customer"]]]
     },
@@ -302,10 +291,6 @@ fixtures = [
     {
         "doctype": "Notification",
         "filters": [["name", "=", "Send Auto Acknowledgment on New Ticket"]]
-    },
-    {
-        "doctype": "Assignment Rule",
-        "filters": [["document_type", "=", "HD Ticket"]]
     },
     {
         "doctype": "Role",
