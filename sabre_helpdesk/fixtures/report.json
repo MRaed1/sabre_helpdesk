@@ -208,7 +208,7 @@
   "add_total_row": 0,
   "add_translate_data": 0,
   "columns": [],
-  "disabled": 0,
+  "disabled": 1,
   "docstatus": 0,
   "doctype": "Report",
   "filters": [],
